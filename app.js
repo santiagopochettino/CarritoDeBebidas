@@ -126,6 +126,25 @@ const pintarFooter = () => {
         carrito = {}
         pintarCarrito()
     })
+    const btnTerminarCompra = document.getElementById('terminar-compra')
+    btnTerminarCompra.addEventListener('click', () => {
+        //terminar la compra
+        const terminarCompra = document.createElement('div')
+        terminarCompra.innerHTML = `
+        <form action="" method="POST">
+        <label for="nombre">Nombre y Apellido:</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Escriba tu Nombre Completo..." required class="form-control">
+        <label for="telefono">Telefono:</label>
+        <input id="telefono" type="number" name="telefono" placeholder="Escriba tu Telefono..." required class="form-control">
+        <label for="direccion">Dirección:</label>
+        <input id="direccion" name="direccion" type="text" placeholder="Escriba su Dirección..." required class="form-control">
+        <button class="btn btn-primary" type="submit">Enviar</button>
+       </form>
+        `
+
+
+
+    })
 
 
 }
